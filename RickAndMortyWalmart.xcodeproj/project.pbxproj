@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		09173E802839A8AD008E78F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173E7F2839A8AD008E78F0 /* AppDelegate.swift */; };
 		09173E822839A8AD008E78F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173E812839A8AD008E78F0 /* SceneDelegate.swift */; };
-		09173E842839A8AD008E78F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173E832839A8AD008E78F0 /* ViewController.swift */; };
+		09173E842839A8AD008E78F0 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173E832839A8AD008E78F0 /* MainController.swift */; };
 		09173E872839A8AD008E78F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09173E852839A8AD008E78F0 /* Main.storyboard */; };
 		09173E892839A8AF008E78F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09173E882839A8AF008E78F0 /* Assets.xcassets */; };
 		09173E8C2839A8AF008E78F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09173E8A2839A8AF008E78F0 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		09173E7C2839A8AD008E78F0 /* RickAndMortyWalmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyWalmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09173E7F2839A8AD008E78F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09173E812839A8AD008E78F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09173E832839A8AD008E78F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09173E832839A8AD008E78F0 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		09173E862839A8AD008E78F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09173E882839A8AF008E78F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09173E8B2839A8AF008E78F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,31 @@
 		09173E7E2839A8AD008E78F0 /* RickAndMortyWalmart */ = {
 			isa = PBXGroup;
 			children = (
+				09173E942839A8E8008E78F0 /* Controllers */,
+				09173E932839A8D7008E78F0 /* View */,
 				09173E7F2839A8AD008E78F0 /* AppDelegate.swift */,
 				09173E812839A8AD008E78F0 /* SceneDelegate.swift */,
-				09173E832839A8AD008E78F0 /* ViewController.swift */,
-				09173E852839A8AD008E78F0 /* Main.storyboard */,
 				09173E882839A8AF008E78F0 /* Assets.xcassets */,
 				09173E8A2839A8AF008E78F0 /* LaunchScreen.storyboard */,
 				09173E8D2839A8AF008E78F0 /* Info.plist */,
 			);
 			path = RickAndMortyWalmart;
+			sourceTree = "<group>";
+		};
+		09173E932839A8D7008E78F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09173E852839A8AD008E78F0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09173E942839A8E8008E78F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09173E832839A8AD008E78F0 /* MainController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09173E842839A8AD008E78F0 /* ViewController.swift in Sources */,
+				09173E842839A8AD008E78F0 /* MainController.swift in Sources */,
 				09173E802839A8AD008E78F0 /* AppDelegate.swift in Sources */,
 				09173E822839A8AD008E78F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -304,7 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
