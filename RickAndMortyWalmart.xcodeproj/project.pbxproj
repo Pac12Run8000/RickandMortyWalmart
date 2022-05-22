@@ -42,6 +42,7 @@
 		09173E732839A8AD008E78F0 = {
 			isa = PBXGroup;
 			children = (
+				09173E952839CDD3008E78F0 /* Readme.md */,
 				09173E7E2839A8AD008E78F0 /* RickAndMortyWalmart */,
 				09173E7D2839A8AD008E78F0 /* Products */,
 			);
@@ -65,7 +66,6 @@
 				09173E882839A8AF008E78F0 /* Assets.xcassets */,
 				09173E8A2839A8AF008E78F0 /* LaunchScreen.storyboard */,
 				09173E8D2839A8AF008E78F0 /* Info.plist */,
-				09173E952839CDD3008E78F0 /* Readme.md */,
 			);
 			path = RickAndMortyWalmart;
 			sourceTree = "<group>";
