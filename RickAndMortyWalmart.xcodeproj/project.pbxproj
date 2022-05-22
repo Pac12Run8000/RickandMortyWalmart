@@ -59,8 +59,12 @@
 		09173E7E2839A8AD008E78F0 /* RickAndMortyWalmart */ = {
 			isa = PBXGroup;
 			children = (
+				09173E9C283A86E4008E78F0 /* Sevices */,
+				09173E9A283A86C7008E78F0 /* Helpers */,
+				09173E98283A869E008E78F0 /* Utilities */,
+				09173E97283A868D008E78F0 /* Models */,
 				09173E942839A8E8008E78F0 /* Controllers */,
-				09173E932839A8D7008E78F0 /* View */,
+				09173E932839A8D7008E78F0 /* Views */,
 				09173E7F2839A8AD008E78F0 /* AppDelegate.swift */,
 				09173E812839A8AD008E78F0 /* SceneDelegate.swift */,
 				09173E882839A8AF008E78F0 /* Assets.xcassets */,
@@ -70,12 +74,12 @@
 			path = RickAndMortyWalmart;
 			sourceTree = "<group>";
 		};
-		09173E932839A8D7008E78F0 /* View */ = {
+		09173E932839A8D7008E78F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				09173E852839A8AD008E78F0 /* Main.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		09173E942839A8E8008E78F0 /* Controllers */ = {
@@ -84,6 +88,58 @@
 				09173E832839A8AD008E78F0 /* MainController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		09173E97283A868D008E78F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09173E98283A869E008E78F0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09173E99283A86AC008E78F0 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		09173E99283A86AC008E78F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09173E9A283A86C7008E78F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				09173E9D283A878B008E78F0 /* Factories */,
+				09173E9B283A86D5008E78F0 /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		09173E9B283A86D5008E78F0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		09173E9C283A86E4008E78F0 /* Sevices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sevices;
+			sourceTree = "<group>";
+		};
+		09173E9D283A878B008E78F0 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
