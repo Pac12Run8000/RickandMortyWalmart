@@ -16,6 +16,13 @@ class MainController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        setupTableView()
+        
+    }
+    
+    private func setupTableView() {
+        let nib = UINib(nibName: "CharacterTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "cell")
     }
 
 
@@ -35,9 +42,11 @@ extension MainController:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.customCell, for: indexPath) as UITableViewCell
-        cell.textLabel?.text = "Me Me"
-        cell.detailTextLabel?.text = "Me Me"
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.customCell, for: indexPath) as! CharacterTableViewCell
+        cell.nameLabel.text = "Norbert Grover"
+//        cell.nameLabel.text = "Norbert Grover"
+//        cell.statusLabel.text = "Alive"
+//        cell.speciesLabel.text = "Human"
         return cell
     }
     
