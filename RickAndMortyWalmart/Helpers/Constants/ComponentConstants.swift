@@ -9,9 +9,7 @@ import Foundation
 
 struct ComponentConstants {
     
-
-    
-    static func fetchCharactersURLComponent(queries:[URLQueryItem]? = nil) -> URLComponents? {
+    static func fetchCharactersURLComponent(queries:[URLQueryItem]? = nil) -> URLComponents {
         var components = URLComponents()
             components.scheme = "https"
             components.host = "rickandmortyapi.com"
