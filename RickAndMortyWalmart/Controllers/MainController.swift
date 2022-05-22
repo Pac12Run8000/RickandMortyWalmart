@@ -35,7 +35,7 @@ extension MainController:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.customCell, for: indexPath) as UITableViewCell
         cell.textLabel?.text = "Me Me"
         cell.detailTextLabel?.text = "Me Me"
         return cell
