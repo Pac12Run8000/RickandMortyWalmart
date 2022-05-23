@@ -16,10 +16,10 @@ class CharacterTableViewCell: UITableViewCell {
     
     var character:RickandMortyCharacter? {
         didSet {
-            nameLabel.text = character?.name
-            statusLabel.text = character?.status
-            speciesLabel.text = character?.species
-            genderLabel.text = character?.gender
+            nameLabel.text = "name: " + character!.name
+            statusLabel.text = "status: " + character!.status
+            speciesLabel.text = "species: " + character!.species
+            genderLabel.text = "gender: " + character!.gender
         }
     }
     

@@ -22,7 +22,6 @@
 		09173EAE283B10E4008E78F0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EAD283B10E4008E78F0 /* NetworkingManager.swift */; };
 		09173EB1283B128F008E78F0 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB0283B128F008E78F0 /* APIErrors.swift */; };
 		09173EB3283BCC2E008E78F0 /* RickAndMortyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB2283BCC2E008E78F0 /* RickAndMortyResponse.swift */; };
-		09173EB5283BD3E3008E78F0 /* MainControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB4283BD3E3008E78F0 /* MainControllerViewModel.swift */; };
 		09173EB7283BD443008E78F0 /* RickAndMortyCharacterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB6283BD443008E78F0 /* RickAndMortyCharacterFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		09173EAD283B10E4008E78F0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		09173EB0283B128F008E78F0 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		09173EB2283BCC2E008E78F0 /* RickAndMortyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyResponse.swift; sourceTree = "<group>"; };
-		09173EB4283BD3E3008E78F0 /* MainControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewModel.swift; sourceTree = "<group>"; };
 		09173EB6283BD443008E78F0 /* RickAndMortyCharacterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				09173E832839A8AD008E78F0 /* MainController.swift */,
-				09173EB4283BD3E3008E78F0 /* MainControllerViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,7 +266,6 @@
 				09173E822839A8AD008E78F0 /* SceneDelegate.swift in Sources */,
 				09173EB3283BCC2E008E78F0 /* RickAndMortyResponse.swift in Sources */,
 				09173EAE283B10E4008E78F0 /* NetworkingManager.swift in Sources */,
-				09173EB5283BD3E3008E78F0 /* MainControllerViewModel.swift in Sources */,
 				09173E9F283A920D008E78F0 /* ComponentConstants.swift in Sources */,
 				09173EA9283AB65A008E78F0 /* CharacterTableViewCell.swift in Sources */,
 				09173EB1283B128F008E78F0 /* APIErrors.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 class MainController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var mainViewModel:MainControllerViewModel?
+    
     var characters = [RickandMortyCharacter]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
