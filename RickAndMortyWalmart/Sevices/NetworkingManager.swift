@@ -14,6 +14,7 @@ class NetworkingManager {
     
     func rickAndMortyAPICall(completion:@escaping(Result<Data, APIErrors>) -> ()) {
         guard let url = ComponentConstants.fetchCharactersURLComponent()?.url else {return}
+        
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
                 completion(.failure(.datataskError(err: error!)))

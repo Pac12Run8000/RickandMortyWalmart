@@ -10,24 +10,27 @@ import UIKit
 class MainController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var mainViewModel:MainControllerViewModel?
+    var characters = [RickandMortyCharacter]() {
+        didSet {
+            print(characters)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerXib(nibName: TableViewConstants.customCellXIB, reuseIdentifier: TableViewConstants.customCell)
-//        NetworkingManager.shared.rickAndMortyAPICall { result in
-//            switch result {
-//            case .failure(let err):
-//                print(err)
-//            case .success(let data):
-//                print(data)
-//                let chars = RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)
-//            }
-//        }
-        
-
-        
+        NetworkingManager.shared.rickAndMortyAPICall {[weak self] result in
+            switch result {
+            case .failure(let fail):
+                print("failure:\(fail.description)")
+            case .success(let data):
+                guard let strongSelf = self else {return}
+                strongSelf.characters = RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)!
+            }
+        }
     }
     
 

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+class MainControllerViewModel {
+    var rickAndMortyCharacters:[RickandMortyCharacter]?
+    
+    init(rickAndMortyCharacters:[RickandMortyCharacter]) {
+        self.rickAndMortyCharacters = rickAndMortyCharacters
+    }
+}

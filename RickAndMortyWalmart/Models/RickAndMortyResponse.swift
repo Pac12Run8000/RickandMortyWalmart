@@ -8,10 +8,10 @@
 import Foundation
 
 struct RickAndMortyResponse:Codable {
-    var results:[RandMCharacter]
+    var results:[RickandMortyCharacter]
 }
 
-struct RandMCharacter:Codable {
+struct RickandMortyCharacter:Codable {
     
     var id:Int
     var name:String
@@ -19,5 +19,7 @@ struct RandMCharacter:Codable {
     var status:String
     var gender:String
 }
+
+
 
 
