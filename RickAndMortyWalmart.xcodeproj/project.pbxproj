@@ -20,6 +20,7 @@
 		09173EAA283AB65A008E78F0 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09173EA8283AB65A008E78F0 /* CharacterTableViewCell.xib */; };
 		09173EAC283ABEA4008E78F0 /* TableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EAB283ABEA4008E78F0 /* TableView+extension.swift */; };
 		09173EAE283B10E4008E78F0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EAD283B10E4008E78F0 /* NetworkingManager.swift */; };
+		09173EB1283B128F008E78F0 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB0283B128F008E78F0 /* APIErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		09173EA8283AB65A008E78F0 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		09173EAB283ABEA4008E78F0 /* TableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+extension.swift"; sourceTree = "<group>"; };
 		09173EAD283B10E4008E78F0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		09173EB0283B128F008E78F0 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		09173E98283A869E008E78F0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				09173EAF283B1270008E78F0 /* CustomErrors */,
 				09173E99283A86AC008E78F0 /* Extensions */,
 			);
 			path = Utilities;
@@ -166,6 +169,14 @@
 				09173EA8283AB65A008E78F0 /* CharacterTableViewCell.xib */,
 			);
 			path = XIBs;
+			sourceTree = "<group>";
+		};
+		09173EAF283B1270008E78F0 /* CustomErrors */ = {
+			isa = PBXGroup;
+			children = (
+				09173EB0283B128F008E78F0 /* APIErrors.swift */,
+			);
+			path = CustomErrors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				09173EAE283B10E4008E78F0 /* NetworkingManager.swift in Sources */,
 				09173E9F283A920D008E78F0 /* ComponentConstants.swift in Sources */,
 				09173EA9283AB65A008E78F0 /* CharacterTableViewCell.swift in Sources */,
+				09173EB1283B128F008E78F0 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
