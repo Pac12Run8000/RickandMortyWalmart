@@ -13,7 +13,10 @@ class MainController: UIViewController {
     var mainViewModel:MainControllerViewModel?
     var characters = [RickandMortyCharacter]() {
         didSet {
-            print(characters)
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self else {return}
+                strongSelf.tableView.reloadData()
+            }
         }
     }
     
@@ -49,15 +52,14 @@ extension MainController:UITableViewDelegate {
 
 extension MainController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let character = characters[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.customCell, for: indexPath) as! CharacterTableViewCell
-        cell.nameLabel.text = "Norbert Grover"
-//        cell.nameLabel.text = "Norbert Grover"
-//        cell.statusLabel.text = "Alive"
-//        cell.speciesLabel.text = "Human"
+        cell.character = character
+
         return cell
     }
 }

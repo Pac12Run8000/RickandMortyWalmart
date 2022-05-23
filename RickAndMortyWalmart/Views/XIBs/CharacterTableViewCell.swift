@@ -14,6 +14,15 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var speciesLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     
+    var character:RickandMortyCharacter? {
+        didSet {
+            nameLabel.text = character?.name
+            statusLabel.text = character?.status
+            speciesLabel.text = character?.species
+            genderLabel.text = character?.gender
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
