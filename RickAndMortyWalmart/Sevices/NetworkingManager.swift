@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 
 class NetworkingManager {
-    static func rickAndMortyAPICall(completion:@escaping(Result<Data, APIErrors>) -> ()) {
+    
+    static let shared = NetworkingManager()
+    
+    func rickAndMortyAPICall(completion:@escaping(Result<Data, APIErrors>) -> ()) {
         guard let url = ComponentConstants.fetchCharactersURLComponent()?.url else {return}
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {

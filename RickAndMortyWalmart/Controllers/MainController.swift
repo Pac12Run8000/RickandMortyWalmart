@@ -16,15 +16,17 @@ class MainController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerXib(nibName: TableViewConstants.customCellXIB, reuseIdentifier: TableViewConstants.customCell)
+//        NetworkingManager.shared.rickAndMortyAPICall { result in
+//            switch result {
+//            case .failure(let err):
+//                print(err)
+//            case .success(let data):
+//                print(data)
+//                let chars = RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)
+//            }
+//        }
         
-        NetworkingManager.rickAndMortyAPICall { result in
-            switch result {
-            case .failure(let err):
-                print(err)
-            case .success(let data):
-                print(data)
-            }
-        }
+
         
     }
     

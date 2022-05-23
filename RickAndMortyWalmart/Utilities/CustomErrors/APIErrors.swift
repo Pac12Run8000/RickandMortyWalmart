@@ -15,6 +15,10 @@ enum APIErrors:Error {
     case jsonError(err:String)
 }
 
+enum JSONErrors:Error {
+    case parseError
+}
+
 extension APIErrors:CustomStringConvertible {
     var description: String {
         switch self {
