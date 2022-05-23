@@ -9,4 +9,5 @@ import Foundation
 
 struct TableViewConstants {
     public static let customCell = "cell"
+    public static let customCellXIB = "CharacterTableViewCell"
 }

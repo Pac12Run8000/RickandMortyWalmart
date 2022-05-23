@@ -15,24 +15,20 @@ class MainController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        setupTableView()
-        
+        tableView.registerXib(nibName: TableViewConstants.customCellXIB, reuseIdentifier: TableViewConstants.customCell)
     }
     
-    private func setupTableView() {
-        let nib = UINib(nibName: "CharacterTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "cell")
-    }
 
-
-    
     
 }
 
 extension MainController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.00
+        return 180.00
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -49,7 +45,5 @@ extension MainController:UITableViewDataSource {
 //        cell.speciesLabel.text = "Human"
         return cell
     }
-    
-    
 }
 
