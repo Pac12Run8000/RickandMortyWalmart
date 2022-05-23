@@ -13,6 +13,7 @@ class MainController: UIViewController {
     
     var characters = [RickandMortyCharacter]() {
         didSet {
+            print("characters:\(characters)")
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else {return}
                 strongSelf.tableView.reloadData()

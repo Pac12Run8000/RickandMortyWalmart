@@ -17,8 +17,22 @@ struct RickandMortyCharacter:Codable {
     var species:String
     var status:String
     var gender:String
-    var image:URL
+    var image:String
+    var location:Location?
+    var origin:Origin?
 }
+
+struct Origin:Codable {
+    var name:String
+    var url:String
+}
+
+struct Location:Codable {
+    var name:String
+    var url:String
+}
+
+
 
 
 
