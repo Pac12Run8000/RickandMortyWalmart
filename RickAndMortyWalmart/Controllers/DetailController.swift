@@ -25,6 +25,12 @@ class DetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
+        view.addSubview(activityIndicator)
+        
         locationsName.text = viewModel?.fetchLocationsName()
         typeTextField.text = viewModel?.fetchType()
         viewModel?.fetchImage(completion: { result in
@@ -33,6 +39,7 @@ class DetailController: UIViewController {
                 print("Error:\(error.description)")
             case .success(let image):
                 self.imageView.image = image
+                activityIndicator.stopAnimating()
             }
         })
         

@@ -35,20 +35,20 @@ class DetailViewModel {
         let backGroundQueue = DispatchQueue.global(qos: .userInitiated)
         backGroundQueue.async {
             URLSession.shared.dataTask(with: imageURL) { data, response, error in
-                guard error == nil else {
-                    completion(.failure(.urlSessionTaskError(err: error!)))
-                    return
-                }
-                guard let data = data else {
-                    completion(.failure(.noData))
-                    return
-                }
-                guard let image = UIImage(data: data) else {
-                    completion(.failure(.dataConversionFailed))
-                    return
-                }
                 mainQueue.async {
-                    completion(.success(image))
+                    guard error == nil else {
+                        completion(.failure(.urlSessionTaskError(err: error!)))
+                        return
+                    }
+                    guard let data = data else {
+                        completion(.failure(.noData))
+                        return
+                    }
+                    guard let image = UIImage(data: data) else {
+                        completion(.failure(.dataConversionFailed))
+                        return
+                    }
+                        completion(.success(image))
                 }
             }.resume()
         }
