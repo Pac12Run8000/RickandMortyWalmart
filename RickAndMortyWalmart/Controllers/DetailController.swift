@@ -13,7 +13,6 @@ class DetailController: UIViewController {
     @IBOutlet weak var typeTextField:UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-    
     var viewModel:DetailViewModel?
     
     var character:RickandMortyCharacter? {
