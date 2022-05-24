@@ -11,9 +11,10 @@ class MainController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var character:RickandMortyCharacter?
     var characters = [RickandMortyCharacter]() {
         didSet {
-            print("characters:\(characters)")
+//            print("characters:\(characters)")
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else {return}
                 strongSelf.tableView.reloadData()
@@ -37,6 +38,13 @@ class MainController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detailSegue") {
+            let destViewController = segue.destination as! DetailController
+            destViewController.character = self.character
+        }
+    }
+    
 
     
 }
@@ -47,7 +55,10 @@ extension MainController:UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        character = characters[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
+//        print("character", character)
+        performSegue(withIdentifier: "detailSegue", sender: self)
     }
 }
 
@@ -60,7 +71,6 @@ extension MainController:UITableViewDataSource {
         let character = characters[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewConstants.customCell, for: indexPath) as! CharacterTableViewCell
         cell.character = character
-
         return cell
     }
 }
