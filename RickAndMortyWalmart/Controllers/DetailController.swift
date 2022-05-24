@@ -27,6 +27,14 @@ class DetailController: UIViewController {
         super.viewDidLoad()
         locationsName.text = viewModel?.fetchLocationsName()
         typeTextField.text = viewModel?.fetchType()
+        viewModel?.fetchImage(completion: { result in
+            switch result {
+            case .failure(let error):
+                print("Error:\(error.description)")
+            case .success(let image):
+                self.imageView.image = image
+            }
+        })
         
     }
     

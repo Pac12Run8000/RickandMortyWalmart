@@ -25,6 +25,7 @@
 		09173EB7283BD443008E78F0 /* RickAndMortyCharacterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB6283BD443008E78F0 /* RickAndMortyCharacterFactory.swift */; };
 		09173EB9283C52A4008E78F0 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EB8283C52A4008E78F0 /* DetailController.swift */; };
 		09173EBB283C52F9008E78F0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EBA283C52F9008E78F0 /* DetailViewModel.swift */; };
+		09173EBD283D1617008E78F0 /* DownloadImageErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EBC283D1617008E78F0 /* DownloadImageErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		09173EB6283BD443008E78F0 /* RickAndMortyCharacterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterFactory.swift; sourceTree = "<group>"; };
 		09173EB8283C52A4008E78F0 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		09173EBA283C52F9008E78F0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		09173EBC283D1617008E78F0 /* DownloadImageErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				09173EB0283B128F008E78F0 /* APIErrors.swift */,
+				09173EBC283D1617008E78F0 /* DownloadImageErrors.swift */,
 			);
 			path = CustomErrors;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				09173EB3283BCC2E008E78F0 /* RickAndMortyResponse.swift in Sources */,
 				09173EAE283B10E4008E78F0 /* NetworkingManager.swift in Sources */,
 				09173EBB283C52F9008E78F0 /* DetailViewModel.swift in Sources */,
+				09173EBD283D1617008E78F0 /* DownloadImageErrors.swift in Sources */,
 				09173E9F283A920D008E78F0 /* ComponentConstants.swift in Sources */,
 				09173EA9283AB65A008E78F0 /* CharacterTableViewCell.swift in Sources */,
 				09173EB1283B128F008E78F0 /* APIErrors.swift in Sources */,
