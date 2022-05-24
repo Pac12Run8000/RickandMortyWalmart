@@ -33,12 +33,13 @@ class DetailController: UIViewController {
         
         locationsName.text = viewModel?.fetchLocationsName()
         typeTextField.text = viewModel?.fetchType()
-        viewModel?.fetchImage(completion: { result in
+        viewModel?.fetchImage(completion: {[weak self] result in
             switch result {
             case .failure(let error):
                 print("Error:\(error.description)")
             case .success(let image):
-                self.imageView.image = image
+                guard let strongself = self else {return}
+                strongself.imageView.image = image
                 activityIndicator.stopAnimating()
             }
         })
