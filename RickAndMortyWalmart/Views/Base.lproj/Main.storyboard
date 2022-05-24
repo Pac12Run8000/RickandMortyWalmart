@@ -73,14 +73,56 @@
                     <view key="view" contentMode="scaleToFill" id="hL8-uW-oyn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="locations name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0b-RU-Tkq">
+                                <rect key="frame" x="20" y="108" width="279" height="34"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.82352941180000006" blue="0.98823529409999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Bef-T2-RRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-Ag-Lmp">
+                                <rect key="frame" x="20" y="157" width="280" height="34"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.82352941180000006" blue="0.98823529409999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="7bR-QB-Jok"/>
+                                    <constraint firstAttribute="height" constant="34" id="OXd-Tx-Cwk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-3i-oOU">
+                                <rect key="frame" x="57" y="251" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1vN-Kj-el3"/>
+                                    <constraint firstAttribute="height" constant="300" id="iqh-hi-gw8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pXJ-Lv-jyT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T0b-RU-Tkq" firstAttribute="leading" secondItem="pXJ-Lv-jyT" secondAttribute="leading" constant="20" id="2Ii-gr-fLL"/>
+                            <constraint firstItem="pXJ-Lv-jyT" firstAttribute="trailing" secondItem="T0b-RU-Tkq" secondAttribute="trailing" constant="115" id="CRz-uy-3QP"/>
+                            <constraint firstItem="ypl-3i-oOU" firstAttribute="top" secondItem="Ssf-Ag-Lmp" secondAttribute="bottom" constant="60" id="H8U-iI-Exg"/>
+                            <constraint firstItem="Ssf-Ag-Lmp" firstAttribute="leading" secondItem="pXJ-Lv-jyT" secondAttribute="leading" constant="20" id="MQl-vE-UYm"/>
+                            <constraint firstItem="ypl-3i-oOU" firstAttribute="centerX" secondItem="hL8-uW-oyn" secondAttribute="centerX" id="OBs-SB-kIa"/>
+                            <constraint firstItem="T0b-RU-Tkq" firstAttribute="top" secondItem="pXJ-Lv-jyT" secondAttribute="top" constant="20" id="plt-Pk-2oe"/>
+                            <constraint firstItem="Ssf-Ag-Lmp" firstAttribute="top" secondItem="T0b-RU-Tkq" secondAttribute="bottom" constant="15" id="zAH-bx-Zn3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EOw-OU-KZl"/>
+                    <connections>
+                        <outlet property="imageView" destination="ypl-3i-oOU" id="oLo-aw-ntT"/>
+                        <outlet property="locationsName" destination="T0b-RU-Tkq" id="z0a-po-iRj"/>
+                        <outlet property="typeTextField" destination="Ssf-Ag-Lmp" id="Zdi-Mm-M2g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXE-Ia-e1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784.057971014493" y="49.553571428571423"/>
+            <point key="canvasLocation" x="1746" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9bl-sX-71V">

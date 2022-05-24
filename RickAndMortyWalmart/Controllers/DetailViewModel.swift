@@ -13,4 +13,16 @@ class DetailViewModel {
     init(character:RickandMortyCharacter) {
         self.character = character
     }
+    
+    func fetchLocationsName() -> String {
+        guard let name = character?.name else {return ""}
+        return "Character name: \(name)"
+    }
+    
+    func fetchType() -> String {
+        guard let type = character?.type else {return ""}
+        return type
+    }
+    
+    
 }

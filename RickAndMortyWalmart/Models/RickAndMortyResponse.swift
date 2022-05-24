@@ -18,6 +18,7 @@ struct RickandMortyCharacter:Codable {
     var status:String
     var gender:String
     var image:String
+    var type:String
     var location:Location?
     var origin:Origin?
 }
