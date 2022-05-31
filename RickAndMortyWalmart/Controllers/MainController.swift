@@ -26,7 +26,8 @@ class MainController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerXib(nibName: TableViewConstants.customCellXIB, reuseIdentifier: TableViewConstants.customCell)
-        NetworkingManager.shared.rickAndMortyAPICall {[weak self] result in
+        guard let url = ComponentConstants.fetchCharactersURLComponent()?.url else {return}
+        NetworkingManager.shared.rickAndMortyAPICall(url: url) {[weak self] result in
             switch result {
             case .failure(let fail):
                 print("failure:\(fail.description)")

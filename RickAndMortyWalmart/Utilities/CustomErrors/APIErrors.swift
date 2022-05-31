@@ -7,12 +7,18 @@
 
 import Foundation
 
-enum APIErrors:Error {
+enum APIErrors:Error, Equatable {
+    
+    
     case datataskError(err:Error)
     case httpResponseStatusCodeError(statusCode:Int)
     case noData
     case malformedURL
     case jsonError(err:String)
+    
+    static func == (lhs: APIErrors, rhs: APIErrors) -> Bool {
+        return true
+    }
 }
 
 enum JSONErrors:Error {
