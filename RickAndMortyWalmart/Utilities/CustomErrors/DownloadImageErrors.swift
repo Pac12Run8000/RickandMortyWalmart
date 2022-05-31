@@ -25,6 +25,4 @@ extension DownloadImageErrors:CustomStringConvertible {
             return "Couldn't create image."
         }
     }
-    
-    
 }

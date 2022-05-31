@@ -36,6 +36,7 @@ class DetailController: UIViewController {
             switch result {
             case .failure(let error):
                 print("Error:\(error.description)")
+                activityIndicator.stopAnimating()
             case .success(let image):
                 guard let strongself = self else {return}
                 strongself.imageView.image = image
