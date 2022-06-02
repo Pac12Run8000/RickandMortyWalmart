@@ -27,6 +27,7 @@
 		09173EBB283C52F9008E78F0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EBA283C52F9008E78F0 /* DetailViewModel.swift */; };
 		09173EBD283D1617008E78F0 /* DownloadImageErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09173EBC283D1617008E78F0 /* DownloadImageErrors.swift */; };
 		091F47E428465E1F006C3331 /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F47E328465E1F006C3331 /* RickAndMortyTests.swift */; };
+		091F47EB2847C0A6006C3331 /* ComponentConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F47EA2847C0A6006C3331 /* ComponentConstantTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		09173EBC283D1617008E78F0 /* DownloadImageErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageErrors.swift; sourceTree = "<group>"; };
 		091F47E128465E1F006C3331 /* RickAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		091F47E328465E1F006C3331 /* RickAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTests.swift; sourceTree = "<group>"; };
+		091F47EA2847C0A6006C3331 /* ComponentConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentConstantTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				091F47E328465E1F006C3331 /* RickAndMortyTests.swift */,
+				091F47EA2847C0A6006C3331 /* ComponentConstantTests.swift */,
 			);
 			path = RickAndMortyTests;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				091F47E428465E1F006C3331 /* RickAndMortyTests.swift in Sources */,
+				091F47EB2847C0A6006C3331 /* ComponentConstantTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
