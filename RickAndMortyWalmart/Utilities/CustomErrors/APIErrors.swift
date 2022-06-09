@@ -15,6 +15,8 @@ enum APIErrors:Error, Equatable {
     case noData
     case malformedURL
     case jsonError(err:String)
+    case emptyStringURL
+    case nilURL
     
     static func == (lhs: APIErrors, rhs: APIErrors) -> Bool {
         return true
@@ -38,6 +40,10 @@ extension APIErrors:CustomStringConvertible {
             return "Invalid request"
         case .jsonError(err: let err):
             return "Couldn't use the data: \(err.description)"
+        case .emptyStringURL:
+            return "The url scheme and host are empty."
+        case .nilURL:
+            return "The URL is nil"
         }
     }
     
