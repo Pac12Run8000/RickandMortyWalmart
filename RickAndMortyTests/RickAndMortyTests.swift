@@ -11,27 +11,51 @@ import XCTest
 class RickAndMortyTests: XCTestCase {
     
     var url:URL?
+    var malFormedURL:URL?
    
     override func setUpWithError() throws {
         url = ComponentConstants.fetchCharactersURLComponent()?.url
+        
+        var components = URLComponents()
+            components.scheme = "https"
+            components.host = "rickandmortyapi.com"
+            components.path = "/api/characterss"
+        malFormedURL = components.url
+        
     }
 
     override func tearDownWithError() throws {
         url = nil
     }
     
-    func testNilURLNetworkManager() throws {
-        let expectation = expectation(description: "response1")
-        NetworkingManager.shared.rickAndMortyAPICall(url: url!) { result in
+    func testMalformedURLNetworkManager() throws {
+        let expectation = expectation(description: "response3")
+        NetworkingManager.shared.rickAndMortyAPICall(url: malFormedURL!) { result in
             switch result {
             case .failure(let err):
-                XCTFail("\(err.description)")
+                XCTAssertEqual("The app sent a request, but it didn't work. Try again later: 404", err.description)
             case .success(let data):
                 XCTAssertNotNil(data)
             }
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 6)
+        waitForExpectations(timeout: 5)
+    }
+    
+    func testNilURLNetworkManager() throws {
+        let expectation = expectation(description: "response1")
+        NetworkingManager.shared.rickAndMortyAPICall(url: nil) { result in
+            switch result {
+            case .failure(let err):
+                XCTAssertEqual("The URL is nil", err.description)
+//                XCTFail("\(err.description)")
+//                XCTAssertEqual("The app could not complete the request: unsupported URL", err.description)
+            case .success(let data):
+                XCTAssertNotNil(data)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5)
     }
 
     func testNetworkManager() throws {
