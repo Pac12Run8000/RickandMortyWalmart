@@ -28,12 +28,15 @@ class RickAndMortyTests: XCTestCase {
         url = nil
     }
     
+    
+    
     func testMalformedURLNetworkManager() throws {
         let expectation = expectation(description: "response3")
         NetworkingManager.shared.rickAndMortyAPICall(url: malFormedURL!) { result in
             switch result {
             case .failure(let err):
-                XCTAssertEqual("The app sent a request, but it didn't work. Try again later: 404", err.description)
+                XCTAssertEqual(err, APIErrors.httpResponseStatusCodeError(statusCode: 404))
+//                XCTFail(err.localizedDescription)
             case .success(let data):
                 XCTAssertNotNil(data)
             }
