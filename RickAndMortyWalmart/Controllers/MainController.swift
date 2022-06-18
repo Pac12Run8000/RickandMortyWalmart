@@ -35,8 +35,10 @@ class MainController: UIViewController {
                 guard let strongSelf = self else {return}
                 do {
                 strongSelf.characters = try RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)!
-                } catch {
+                } catch APIErrors.jsonError(err: "There was an issuse with the object model and the data."){
                     print("this error: \(APIErrors.jsonError(err: "There was an issuse with the object model and the data."))")
+                } catch {
+                    print("error: \(error.localizedDescription)")
                 }
             }
         }
