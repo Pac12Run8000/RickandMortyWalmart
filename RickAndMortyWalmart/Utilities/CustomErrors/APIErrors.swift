@@ -39,7 +39,7 @@ extension APIErrors:CustomStringConvertible {
         case .malformedURL:
             return "Invalid request"
         case .jsonError(err: let err):
-            return "Couldn't use the data: \(err.description)"
+            return "Data was mis-matched with the object model: \(err.description)"
         case .emptyStringURL:
             return "The url scheme and host are empty."
         case .nilURL:

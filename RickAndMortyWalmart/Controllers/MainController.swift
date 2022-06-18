@@ -33,7 +33,11 @@ class MainController: UIViewController {
                 print("failure:\(fail.description)")
             case .success(let data):
                 guard let strongSelf = self else {return}
-                strongSelf.characters = RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)!
+                do {
+                strongSelf.characters = try RickAndMortyCharacterFactory.shared.fetchArrayOfRickAndMortyObjects(data)!
+                } catch {
+                    print("this error: \(APIErrors.jsonError(err: "There was an issuse with the object model and the data."))")
+                }
             }
         }
     }
