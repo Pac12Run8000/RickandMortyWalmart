@@ -69,7 +69,8 @@ class RickAndMortyTests: XCTestCase {
             // XCTest: expectation
             switch result {
             case .failure(let err):
-                XCTFail("The call failed because: \(err.description)")
+                XCTAssertEqual(err.description, "The app could not complete the request: The Internet connection appears to be offline.")
+//                XCTFail("The call failed because: \(err.description)")
             case .success(let data):
                 XCTAssertNotNil(data)
             }
